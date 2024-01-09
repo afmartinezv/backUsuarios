@@ -7,8 +7,8 @@ createUser: async (request,response) => {
         const userCreate = await newUser.save();
         if(userCreate._id){
             response.json({
-                resultado: 'bien',
-                mensaje: 'Usuario creado',
+                resultado: 'Bien',
+                mensaje: 'Usuario Creado',
                 datos: userCreate._id});
         }
     } catch (error) {
@@ -28,12 +28,12 @@ viewUsers:async (request,response) => {
             users.push(objeto);
         }
         response.json({
-            result: 'bien',
-            message: 'todos los regalos', 
+            result: 'Bien',
+            message: 'Todos los usuarios', 
             datos: users});
     } catch (error) {
         response.json({
-            result: 'mal',
+            result: 'Mal',
             message: 'Ocurrio un error',
             datos: error
         });
@@ -55,14 +55,14 @@ updateUser: async (request, response) => {
         request.body
       );
       response.json({
-        resultado: 'bien',
-        mensaje: 'regalo actualizado',
+        resultado: 'Bien',
+        mensaje: 'Usuario Actualizado',
         datos: actualizado._id,
       });
     } catch (error) {
         response.json({
-          resultado: 'mal',
-          mensaje: 'ocurrió un error',
+          resultado: 'Mal',
+          mensaje: 'Ocurrió un error',
           datos: error,
         });
       }
@@ -73,13 +73,13 @@ deleteUser:async (request,response) => {
             request.params.id
         );
         response.json({
-            result: 'bien',
-            message: 'Todos los Usuario eliminado', 
+            result: 'Bien',
+            message: 'Usuario Eliminado', 
             datos: del._id
         });
     } catch (error) {
         response.json({
-            result: 'mal',
+            result: 'Mal',
             message: 'Ocurrio un error',
             datos: error,
         });
