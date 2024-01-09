@@ -6,7 +6,7 @@ const esquemaUsers = new Schema({
     lastname: {type:String, required: true},
     cc: {type:Number, required: true},
     email: {type:String, required: true},
-    password: {type:Number, required: true},
+    password: {type:String, required: true},
     
 },
 

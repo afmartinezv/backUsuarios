@@ -7,8 +7,8 @@ createUser: async (request,response) => {
         const userCreate = await newUser.save();
         if(userCreate._id){
             response.json({
-                resultado: 'Bien',
-                mensaje: 'Usuario Creado',
+                result: 'Bien',
+                message: 'Usuario Creado',
                 datos: userCreate._id});
         }
     } catch (error) {
@@ -55,14 +55,14 @@ updateUser: async (request, response) => {
         request.body
       );
       response.json({
-        resultado: 'Bien',
-        mensaje: 'Usuario Actualizado',
+        result: 'Bien',
+        message: 'Usuario Actualizado',
         datos: actualizado._id,
       });
     } catch (error) {
         response.json({
-          resultado: 'Mal',
-          mensaje: 'Ocurrió un error',
+          result: 'Mal',
+          message: 'Ocurrió un error',
           datos: error,
         });
       }
